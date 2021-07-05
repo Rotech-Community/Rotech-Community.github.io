@@ -1,0 +1,48 @@
+---
+layout: page-with-title
+title: About
+permalink: /about/
+redirect_from: /about.html
+navigation: true
+order: 2
+---
+
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+    <div class="about-content post-content">
+      <h2 class="page-heading">Who are we?</h2>
+      <p>
+        A society for anyone interested in technology, whether you've just started exploring the digital world or you’re already a computer science expert. Technology surrounds us and yet so few people understand or appreciate how it works. We want to change this.
+      </p>
+      <p>
+        Our events range from the small and specialised to the huge and open-to-all. We host talks from our favourite developers and companies, coding classes for anyone that wants to get started, projects and workshops for those wanting to develop their skills, and socials for everyone to enjoy themselves. We also host a number of careers events with our sponsors to give you unique opportunities to network and secure internships or jobs.
+      </p>
+      <p>
+        We also organise hackathons, competitions where you have 24 hours to work with a team to program something awesome. If you think you’re not good enough for this, you’re wrong. Hackathons are all about learning, building something with your new knowledge, and sharing the result with others. You don’t have to be a coding pro to have fun, just an open mind and your best ideas.
+      </p>
+      <p>
+        We make it our aim to give our members the the skills, knowledge and friendships that will help them in the future.
+      </p>
+    </div>
+  </div>
+</div>
+
+<h2 class="page-heading">Team</h2>
+
+{% assign team = site.data.people | where: "team", true | sort: 'name' %}
+{% assign depts = site.data.departments %}
+{% for dept in depts %}
+  <h2 class="page-heading">{{dept.heading}}</h2>
+  {% if dept.subheading  %}
+    <p style="text-align: center; color:rgba(255,255,255,0.55); "> <i> {{dept.subheading}} </i> </p>
+  {% endif %}
+
+  <div class="responsive-boxes">
+    {% for member in team %}
+      {% if member.dept == dept.name %} 
+        {% include member-overview.html member=member %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endfor %}

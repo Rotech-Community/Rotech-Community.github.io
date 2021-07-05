@@ -1,0 +1,28 @@
+.page-title {
+  text-align: center;
+  font-size: 2.25em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: .75em 0 .5em;
+}
+
+.page-tagline {
+  text-align: center;
+  font-size: 1.125em;
+  color: rgba(255,255,255,.5);
+  line-height: 1.4;
+}
+
+.page-heading {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  margin: 2.5em 0 1em;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}

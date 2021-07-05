@@ -1,0 +1,13 @@
+
+- name: Adil Shehzad
+  role: President
+  img-link: '../assets/images/people/Adil.png'
+  team: true
+  dept: lead
+  profiles:
+    twitter: https://twitter.com/wilhelmklopp
+    facebook: https://www.facebook.com/wilhelm.kl
+    github: https://github.com/xoneco
+    linkedin: https://www.linkedin.com/in/wilhelmklopp
+    slack: slack://user?team=T0UGQ82Q4&id=U0UGZJ4J1
+

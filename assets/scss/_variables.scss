@@ -1,0 +1,32 @@
+// Bootstrap
+
+$brand-primary: #121C44;
+$brand-primary-lighter: #0E0E40;
+$brand-secondary: #d81e5b;
+$brand-ternary: #0fa3b1;
+$body-bg: $brand-primary;
+$text-color: white;
+$font-family-sans-serif: Karla, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+$border-radius-base: 0px;
+$link-color: white;
+$link-hover-decoration: none;
+
+// Custom
+
+$max-site-width: 1100px;
+$breakpoint-tablet: 992px;
+$mob-breakpoint-width: 350px;
+$mob-breakpoint-height: 450px;
+
+@mixin bp-mob {
+  @media only screen and (min-width: $mob-breakpoint-width) and (min-height: $mob-breakpoint-height) {
+    @content;
+  }
+}
+
+@mixin bp-tab {
+    @media only screen and (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}

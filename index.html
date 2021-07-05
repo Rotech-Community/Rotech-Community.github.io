@@ -1,0 +1,161 @@
+---
+layout: default
+title: Home
+navigation: true
+order: 1
+---
+
+
+<div class="homepage">
+  <div class="masthead" data-index="0">
+    <div class="wrapper container-fluid">
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+          <div class="type-wrapper text-center">
+            <p id="type-space">
+              Are you interested in... <br><span id="typer"></span>
+            </p>
+          </div>
+          <p class="intro">
+            We host
+            <a>tech talks</a>,
+            <a >socials</a>,
+            <a >Hackathons</a>,
+            <a >Workshops</a> &
+            <a >Webinars</a>
+            
+          <p class="intro">And the best bit? Join Discord Server!</p>
+          <p><a href="#" class="join-now">Join Discord!!</a></p>
+          <br />
+          <p class="intro">Like our <a href="https://facebook.com/{{ site.facebook_username }}"><i class="icon icon-facebook"></i>Facebook page</a> for the latest updates and events, and join our <a href="{{ site.slack_url }}"><i class="icon icon-github"></i>GitHub Organization</a> to contribute to OpenSource</p>
+          <a href="{{ '/welcome' | prepend: site.baseurl }}" class="join-now">Read our welcome guide</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <section class="tech-talks techtalks-img" data-index="1">
+    <div class="wrapper container-fluid">
+      <h2 id="tech-talks" class="section-title">Contribute to OpenSource Education</h2>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+          <div class="description">
+            <p>We are Working with the Oppia Education to Promote OpenSource Free Education for Pakistan Children. </p>
+            <p>People who Could not afford Child Education , Oppia Education Provide them Learning opportunities</p>
+          </div>
+          <a href="{{ '/jobs' | prepend: site.baseurl }}" class="button">Contribute to Oppia Education</a>
+          <a href="" target="_blank" class="button">Oppia Jobs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="workshops workshop-img" id="workshops" data-index="2">
+    <div class="wrapper container-fluid row">
+            <h2 id="workshops" class="section-title">Workshops and Classes</h2>
+            <div class="row">
+              <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+                <div class="description">
+                  <p>Learn about <a href="{{ '/series/coding-and-cookies' | prepend: site.baseurl }}">web development</a>, <a href="{{ '/series/blender-and-brownies' | prepend: site.baseurl }}">Blender</a>, brush up on your <a href="{{ '/series/algorithms-in-c' | prepend: site.baseurl }}">C programming</a> knowledge or come chill and learn about <a href="{{ '/series/hardware-and-chill' | prepend: site.baseurl }}">hardware</a>!</p>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section>
+
+    <section class="projects projects-img" data-index="3">
+      <div class="wrapper container-fluid row">
+          <h2 id="projects" class="section-title">Projects</h2>
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+              <div class="description">
+                <p>Join us as we work together to build something awesome while trying out new technologies and learning new skills!</p>
+              </div>
+              <a href="{{ '/projects' | prepend: site.baseurl }}" class="button">See all our projects</a>
+            </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="socials socials-img" data-index="4">
+      <div class="wrapper container-fluid">
+        <h2 id="socials" class="section-title">Socials</h2>
+        <div class="row">
+          <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+            <div class="description">
+              <p>TechSoc socials are a great chance to hang out, meet people involved in different parts of the society and make awesome new friends!</p>
+              <p>We do a bi-weekly social, collaborations with other societies, days out in London, and a scavenger hunt. Everyone’s welcome, whether or not you’re a member!</p>
+            </div>
+            <a href="{{ '/series/socials' | prepend: site.baseurl }}" class="button">See all socials</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <section class="hackathons hackathons-img" data-index="5">
+    <div class="wrapper container-fluid">
+      <h2 id="hackathons" class="section-title">Hackathons</h2>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+          <div class="description">
+            <p>We love hackathons here at TechSoc! Whether we’re running our own or venturing across the UK and beyond, you’re bound to find us working on a cool new project.</p>
+            <p>We co-host <a href="http://hacklondon.org">HackLondon</a> with <a href="http://kcl.tech">KCL Tech</a>.<br> In the past, we've ran a seriously successful Local Hack Day and hosted Europe's very first <a href="https://www.youtube.com/watch?v=0aXXT3KnaUE"> Data Science Student Challenge</a> with Microsoft!</p>
+          </div>
+          <a href="{{ '/series/hackathons' | prepend: site.baseurl }}" class="button">See all hackathons</a>
+        </div>
+      </div>
+    </div>
+  </section>
+    <section class="community community-img">
+    <div class="wrapper container-fluid">
+      <h2 id="hackathons" class="section-title">We're a friendly bunch!</h2>
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2">
+          <div class="description">
+            <p> We endeavour to make everyone and anyone who comes to our events feel welcome and included in the tech community regardless of background or experience. </p>
+            <p> Look out for a TechSoc mentor or talk to one of the committee members! <br> You can also join us on our Slack! Either way, we'd love to help!
+            </p>
+          </div>
+            <p>
+              <a href="{{ site.slack_url }}" class="button"><i class="icon icon-slack "></i> Connect With Us</a>
+            </p>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="community">
+    <div class="wrapper container-fluid">
+      <h2 id="hackathons" class="section-title">Upcoming Events!</h2>
+      <div class="row">
+          <h3>Upcoming Event</h3>
+          {% include scripts/events_upcoming events=site.events %}
+          {% for event in events_upcoming_result | limit: 3 %}
+            {% include event-overview.html event=event %}
+          {% endfor %}
+        </div>
+      
+    </div>
+    </section>
+
+
+  <section class="partners-homepage" data-index="6">
+    <div class="wrapper container-fluid">
+      <h3 id="partners" class="section-title">Sponsors &amp; Partners</h3>
+      {% assign sponsors = site.sponsors | sort: "order" %}
+      {% for sponsor in sponsors %}
+        <a title="{{ sponsor.name }}" class="partner logo">
+          <img src="{{ sponsor.logo | prepend: site.baseurl }}" alt="{{ sponsor.name }} logo" class="{{ sponsor.name | slugify }}">
+        </a>
+      {% endfor %}
+      {% for partner in site.data.partners limit: 1 %}
+        <a title="{{ partner.name }}" class="partner logo">
+          <img src="{{ partner.logo | prepend: site.baseurl }}" alt="{{ partner.name }} logo" class="{{ partner.name | slugify }}">
+        </a>
+      {% endfor %}
+    </div>
+    <a class="button" href="/clubs">Learn more...</a>
+  </section>
+
+</div>

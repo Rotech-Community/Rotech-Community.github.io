@@ -1,0 +1,123 @@
+# Site settings
+
+title: RoTech - Rotaract Club of Lahore
+email: adil.shehzad4146@gmail.com
+description: RoTech is the International Community for the Tech Lovers
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "Rotech-Community.github.io" # the base hostname & protocol for your site
+# timezone: "Islamabad/Pakistan"
+
+# Social media
+
+twitter_username: uclutech
+github_username: techsoc
+linkedin_url: https://www.linkedin.com/company/uclu-techsoc
+
+# Build settings
+
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+exclude:
+  - CNAME
+  - LICENSE
+  - README.md
+  - Gemfile*
+  - node_modules
+  - package.json
+  - bower.json
+  - gulpfile.js
+  - assets/bower_components
+  - facebook-sync
+
+# Collections
+
+collections:
+  members:
+  sponsors:
+  events:
+    output: true
+    permalink: /events/:path/
+  series:
+    output: true
+    permalink: /series/:path/
+  jobs:
+    output: true
+    permalink: /jobs/:path/
+  sponsors:
+      output: true
+      permalink: /clubs/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+  redirects:
+    output: true
+    permalink: /:path/
+  calendars:
+    output: true
+    permalink: /calendars/:path:output_ext
+  graphs:
+    output: true
+    permalink: /graphs/:path/
+  resources:
+    output: true
+    permalink: /resources/:path/
+  resource-type:
+    output: true
+    permalink: /resources/:path/
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: events
+    values:
+      layout: event
+  -
+    scope:
+      path: ""
+      type: series
+    values:
+      layout: series
+  -
+    scope:
+      path: ""
+      type: jobs
+    values:
+      layout: job
+  -
+    scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      is_post: true
+  -
+    scope:
+      path: ""
+      type: calendars
+    values:
+      layout: calendar
+      include_label: true
+  -
+    scope:
+      path: ""
+      type: sponsors
+    values:
+      layout: partner
+  -
+    scope:
+      path: ""
+      type: resource-type
+    values:
+      layout: resource-type
+
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap

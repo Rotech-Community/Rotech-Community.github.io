@@ -1,0 +1,55 @@
+---
+layout: page-narrow
+---
+
+{% assign project = page %}
+{% include scripts/event_status event=project %}
+
+<div class="project-page">
+  <div class="project-header clearfix">
+    <div class="row">
+      <div class="col-sm-3 col-sm-push-9">
+        {% if project.logo %}<img src="{{ project.logo | prepend: '/assets/images/projects/' | prepend: site.baseurl }}" class="logo">{% endif %}
+      </div>
+      <div class="col-sm-9 col-sm-pull-3">
+
+        {% if event_status_result %}
+          <span class="status {{ event_status_result }}">{{ event_status_result }}</span>
+        {% endif %}
+
+        <h1 class="title">{{ project.title }}</h1>
+        <h2 class="category">{{ project.category }}</h2>
+
+        {% if project.links %}
+          <div class="actions">
+            {% if project.links.github %}
+              <a href="{{ project.links.github }}" class="action"><i class="icon-github"></i> Github</a>
+            {% endif %}
+            {% if project.links.facebook_group %}
+              <a href="{{ project.links.facebook_group }}" class="action"><i class="icon-facebook"></i> Facebook group</a>
+            {% endif %}
+            {% if project.links.slack %}
+              <a href="{{ project.links.slack }}" class="action"><i class="icon-slack"></i> Slack</a>
+            {% endif %}
+            {% if project.links.drive %}
+              <a href="{{ project.links.drive }}" class="action">Google Drive</a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+        {% if project.subtext %}
+          <div class="subtext">
+            {{ project.subtext | markdownify }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="post-content project-content">
+    {{ content }}
+  </div>
+  <div class="series-events">
+    {% assign events = site.events | where: "project_id", project.project_id %}
+    {% include category-events.html events=events %}
+  </div>
+</div>

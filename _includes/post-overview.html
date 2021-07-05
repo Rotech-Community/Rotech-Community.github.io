@@ -1,0 +1,10 @@
+<li class="post-overview">
+  <a href="{{ post.url | prepend: site.baseurl }}">
+    <h2 class="title">
+      {{ post.title }}
+    </h2>
+    <div class="metadata">
+      {{ post.date | date: "%d %B %Y" }}{% if post.author %}&ensp;•&ensp;{{ post.author }}{% endif %}
+    </div>
+  </a>
+</li>

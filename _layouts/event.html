@@ -1,0 +1,64 @@
+---
+layout: page-narrow
+---
+
+{% assign event = page %}
+
+{% assign _this_year = site.time | date: "%Y" %}
+{% assign _event_year = event.start_time | date: "%Y" %}
+
+{% if _this_year != _event_year %}
+  {% assign date_formatting = "%A, %-d %B, %Y %H:%M" %}
+{% else %}
+  {% assign date_formatting = "%A, %-d %B %H:%M" %}
+{% endif %}
+
+{% assign _event_start_date = event.start_time | date: "%Y-%m-%d" %}
+{% assign _event_end_date = event.end_time | date: "%Y-%m-%d" %}
+
+<div class="event-page">
+  <div class="event-header">
+    {% include category-link.html event=event %}
+    <h1 class="title">
+      {{ event.title }}
+    </h1>
+    {% if event.subtext %}
+      <div class="subtext">
+        {{ event.subtext | markdownify }}
+      </div>
+    {% endif %}
+    <div class="metadata">
+      <div class="time">
+        <i class="icon icon-clock"></i>
+        {{ event.start_time | date: date_formatting }}
+        {% if event.end_time and _event_start_date != _event_end_date %}
+          &ndash;
+          {{ event.end_time | date: date_formatting }}
+        {% elsif event.end_time %}
+          &ndash;
+          {{ event.end_time | date: "%H:%M" }}
+        {% endif %}
+      </div>
+      <div class="location">
+        <i class="icon icon-location"></i>
+        {{ event.location }}
+      </div>
+    </div>
+    <div class="actions">
+      {% for action in event.actions %}
+        <a href="{{ action.url }}" class="action">{{ action.label }}</a>
+      {% endfor %}
+      {% if event.facebook_id %}
+        <a href="https://www.facebook.com/events/{{ event.facebook_id }}" class="action"><i class="icon-facebook"></i> Facebook event</a>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if event.project_id %}
+    {% include project-event-notice.html project_id=event.project_id %}
+  {% endif %}
+  
+  <div class="post-content event-content">
+    {{ content }}
+  </div>
+</div>

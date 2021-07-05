@@ -1,0 +1,70 @@
+.member-overview {
+  border: 3px solid rgba(255,255,255,.1);
+  border-radius: 6px;
+  padding: 13px;
+  text-align: center;
+  flex: 1;
+  margin-top: 32px;
+
+  .name {
+    font-size: 1.25em;
+    margin: 0 0 .25em;
+  }
+
+  .role {
+    font-size: 1.0625;
+    flex: 1;
+    color: rgba(255,255,255,.5);
+    margin: 0;
+  }
+
+  .social-media-list {
+    margin-top: 8px;
+    margin-left: -1px;
+    line-height: 1.625em;
+
+    .icon {
+      font-size: 1.625em;
+      color: rgba(255,255,255,.2);
+      transition: color 200ms linear;
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+
+    a:hover .icon {
+      color: white;
+    }
+  }
+}
+
+.about-content {
+  border: 3px solid rgba(255,255,255,.1);
+  border-radius: 10px;
+  padding: 2em 2em 1.5em;
+
+  .page-heading {
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.333em;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+}
+
+.profile-pic {
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  margin-top: -59px;
+  border: 7px solid #121C44;
+}
+
+.end-credits{
+  border-top-color: #d81e5b;
+  border-top-style: ridge;
+  padding-top: 3%;
+  text-align: center;
+}
+

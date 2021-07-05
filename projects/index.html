@@ -1,0 +1,35 @@
+---
+layout: page-with-title
+title: Projects
+tagline: Join our student-initiated projects to collaborate and build something awesome, or start a project yourself!
+permalink: /projects/
+redirect_from: /projects.html
+navigation: true
+order: 4
+---
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+  	<h2 style="text-align: center;"> Active Projects </h2>
+  	{% assign projects = site.projects | sort:"start_time" %}
+    {% for project in projects %}
+    	{% if project.end_time > "2016-06-06" %}
+      		{% include project-overview.html project=project %}
+        {% endif %}
+      	
+    {% endfor %}
+
+    <h2 style="text-align: center;"> Past Projects </h2>
+    {% for project in projects %}
+    	{% if project.end_time < "2016-06-06" %}
+      		{% include project-overview.html project=project %}
+      	{% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+
+<div class="contact-notice post-content">
+  <h3>Interested in running your own project?</h3>
+  <p>Get in touch at <a href="mailto:projects@techsoc.io">projects@techsoc.io</a></p>
+</div>

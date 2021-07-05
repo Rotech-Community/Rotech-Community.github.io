@@ -1,0 +1,35 @@
+---
+layout: page-narrow
+---
+
+{% assign series = page %}
+{% include scripts/event_status event=series %}
+
+<div class="series-page">
+  <div class="series-header">
+
+    <h1 class="title">{{ series.title }}</h1>
+
+    {% if series.subtext %}
+      <div class="subtext">
+        {{ series.subtext | markdownify }}
+      </div>
+    {% endif %}
+
+  </div>
+
+  {% if event_status_result == "finished" %}
+    <div class="event-notice">
+      <p>This event series has ended.</p>
+    </div>
+  {% endif %}
+
+  <div class="post-content series-content">
+    {{ content }}
+  </div>
+
+  <div class="series-events">
+    {% assign events = site.events | where: "series_id", series.series_id %}
+    {% include category-events.html events=events %}
+  </div>
+</div>

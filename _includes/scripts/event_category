@@ -1,0 +1,24 @@
+{% capture _suppress_output %}
+
+{% comment %}
+
+  NOTE: This file needs to have CRLF line endings to conform to the iCalendar spec (RFC 2445)
+
+{% endcomment %}
+
+{% assign event_category_result = null %}
+{% assign event_category_label_result = null %}
+
+{% if include.event.series_id %}
+  {% assign event_category_result = site.series | where: "series_id", include.event.series_id | first %}
+{% elsif include.event.project_id %}
+  {% assign event_category_result = site.projects | where: "project_id", include.event.project_id | first %}
+{% endif %}
+
+{% if event_category_result.event_label %}
+  {% assign event_category_label_result = event_category_result.event_label %}
+{% elsif event_category_result.title %}
+  {% assign event_category_label_result = event_category_result.title %}
+{% endif %}
+
+{% endcapture %}{% assign _suppress_output = null %}

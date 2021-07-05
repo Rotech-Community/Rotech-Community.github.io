@@ -1,0 +1,31 @@
+- name: lead
+  heading: Rulers of the Land
+
+- name: workers
+  heading: Sponsorship
+
+- name: marketing
+  heading: Marketing Team
+  subheading: Where all the magic happens
+
+- name: events
+  heading: Events Team
+
+- name: CS50
+  heading: CS50 
+
+- name: projects
+  heading: Projects Team
+
+- name: hackathons
+  heading: Hackathons Team
+
+- name: socials
+  heading: Socials
+
+- name: outreach
+  heading: Outreach Team
+
+- name: reps
+  heading: Representatives
+
